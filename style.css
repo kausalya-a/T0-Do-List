@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height:100vh;
+background: linear-gradient(50deg,hotpink,pink,pink);
+    padding: 10px;
+}
+.to-do{
+    width: 100%;
+    max-width: 550px;
+    background: linear-gradient(white,white);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 25px;
+}
+.to-do h2{
+    font-size: 23px;
+ color:rgb(31, 31, 109);
+ display: flex;
+ align-items: center;
+ margin-bottom: 20px;
+}
+.to-do img{
+    width:30px ;
+    margin-left: 10px;
+}
+.row{
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: lavender;
+border-radius: 25px;
+padding-left: 20px;
+margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 16px 45px;
+    background: linear-gradient(50deg,hotpink,pink,violet);
+    color:navy;
+    font-size: 15px;
+    cursor:pointer;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0.3s;
+}
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding:12px 8px 12px 50px; 
+    user-select:none;
+    cursor:pointer;
+    position: relative;
+}
+ul li::before{
+    content:'';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 30%;
+    background-image: url(image/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left:8px;
+}
+ul li.checked{
+  color:blue;
+  text-decoration: line-through;  
+}
+ul li.checked::before{
+    background-image: url(image/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top:5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:red;
+    line-height: 40px;
+    text-align: center;
+
+}
+ul li span:hover{
+   background:silver;
+   border-radius: 50px; 
+}
